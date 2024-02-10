@@ -1,18 +1,275 @@
-<!DOCtype html>
+<!DOCTYPE html>
 <html>
- <head>
-   <title> My new website</title> 
- </head>
- <body>
-   <center><h1>Mohamed Khafagy</h1></center>
-   <img src="https://4b1e71f5-b215-40b4-ac11-178cf63ca859-00-3mziodtxzxd74.picard.replit.dev/static/nature.jpg" alt ="nature image" height = "320" >
-   <center><h2>About me</h2>
-   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
-   <h2>Open positions</h2>
-   <p>TODO= Show the jobs here</p>
-    <button>Contact us</button></center>
-   
-  
- </body>
-  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Your CSS code here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      background-image: url("https://source.unsplash.com/random/800x600"); /* Replace this with your background image */
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+      text-align: center;
+      animation: fade-in 1s ease-in-out;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      color: #333333;
+    }
+
+    .header p {
+      font-size: 18px;
+      color: #666666;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      margin: 40px 0; /* Increased the margin */
+      animation: slide-in-left 1s ease-in-out;
+    }
+
+    .profile img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .profile-info {
+      margin-left: 20px;
+    }
+
+    .profile-info h2 {
+      font-size: 24px;
+      color: #333333;
+    }
+
+    .profile-info p {
+      font-size: 16px;
+      color: #666666;
+    }
+
+    .skills {
+      margin: 40px 0; /* Increased the margin */
+      animation: slide-in-right 1s ease-in-out;
+    }
+
+    .skills h3 {
+      font-size: 20px;
+      color: #333333;
+    }
+
+    .skills ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills li {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      color: #666666;
+      transition: transform 0.3s;
+    }
+
+    .skills li:hover {
+      transform: scale(1.2); /* Added animation when hover */
+    }
+
+    .skills p {
+      font-size: 14px;
+      color: #666666;
+      margin: 10px 0;
+    }
+
+    .portfolio {
+      margin: 40px 0; /* Increased the margin */
+      animation: fade-in 1s ease-in-out;
+    }
+
+    .portfolio h3 {
+      font-size: 20px;
+      color: #333333;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+
+    .portfolio-item {
+      position: relative;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .portfolio-item .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .portfolio-item .overlay:hover {
+      opacity: 1;
+    }
+
+    .portfolio-item .overlay p {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: 14px;
+      color: #ffffff;
+    }
+
+    .contact {
+      margin: 40px 0; /* Increased the margin */
+      animation: slide-in-left 1s ease-in-out;
+    }
+
+    .contact h3 {
+      font-size: 20px;
+      color: #333333;
+    }
+
+    .contact p {
+      font-size: 16px;
+      color: #666666;
+    }
+
+    .contact a {
+      color: #333333;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      margin: 40px 0; /* Increased the margin */
+      text-align: center;
+      animation: slide-in-right 1s ease-in-out;
+    }
+
+    .footer p {
+      font-size: 14px;
+      color: #666666;
+    }
+
+    /* Keyframes for animations */
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slide-in-left {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slide-in-right {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Personal Page Template</h1>
+      <p>A simple HTML and CSS template for your personal website</p>
+    </div>
+    <div class="profile">
+      <img src="https://source.unsplash.com/random/200x200" alt="Your image"> <!-- Replace this with your image -->
+      <div class="profile-info">
+        <h2>Your name</h2>
+        <p>Your title or role</p>
+        <p>A brief introduction about yourself</p>
+      </div>
+    </div>
+    <div class="skills">
+      <h3>Skills</h3>
+      <ul>
+        <li>HTML</li>
+        <p>HTML is the standard markup language for creating web pages and web applications. I can use HTML to structure and present the content of my website.</p>
+        <li>CSS</li>
+        <p>CSS is the language that describes the style of an HTML document. I can use CSS to control the layout, colors, fonts, and animations of my website.</p>
+        <li>JavaScript</li>
+        <p>JavaScript is the programming language that enables dynamic and interactive features on web pages. I can use JavaScript to add functionality, interactivity, and logic to my website.</p>
+        <!-- Add more skills here -->
+      </ul>
+    </div>
+    <div class="portfolio">
+      <h3>Portfolio</h3>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="https://source.unsplash.com/random/300x200" alt="Project 1"> <!-- Replace this with your project image -->
+          <div class="overlay">
+            <p>Project 1</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://source.unsplash.com/random/300x200" alt="Project 2"> <!-- Replace this with your project image -->
+          <div class="overlay">
+            <p>Project 2</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://source.unsplash.com/random/300x200" alt="Project 3"> <!-- Replace this with your project image -->
+          <div class="overlay">
+            <p>Project 3</p>
+          </div>
+        </div>
+        <!-- Add more portfolio items here -->
+      </div>
+    </div>
+    <div class="contact">
+      <h3>Contact</h3>
+      <p>If you want to get in touch with me, you can email me at <a href="mailto:your-email@example.com">your-email@example.com</a> or follow me on <a href="https://twitter.com/your-username">Twitter</a>.</p>
+      <!-- Add more contact details here -->
+    </div>
+    <div class="footer">
+      <p>© 2024 Your name. All rights reserved.</p>
+    </div>
+  </div>
+</body>
 </html>
